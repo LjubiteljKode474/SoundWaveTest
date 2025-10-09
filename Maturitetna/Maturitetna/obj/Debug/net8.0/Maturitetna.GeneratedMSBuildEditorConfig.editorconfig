@@ -16,6 +16,8 @@ build_property.RootNamespace = Maturitetna
 build_property.ProjectDir = /home/faruk/Documents/GitHub/Maturitetna/Maturitetna/Maturitetna/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
 [/home/faruk/Documents/GitHub/Maturitetna/Maturitetna/Maturitetna/AddPlaylist.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

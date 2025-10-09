@@ -9,7 +9,7 @@ namespace Maturitetna;
 
 public partial class Login : Window
 {
- 
+
     private readonly MainWindow _mainWindow;
     private readonly AddPlaylist _addPlaylist;
     private readonly PlayListItem _playList;
@@ -29,10 +29,11 @@ public partial class Login : Window
         var register = new Register();
         register.Show();
         this.Close();
-       
+
     }
     public void SignIn_OnClick(object? sender, RoutedEventArgs e)
     {
+
         string username = Username.Text;
         string password = Password.Text;
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -42,7 +43,7 @@ public partial class Login : Window
             prazno.IsVisible = true;
             wrong.IsVisible = false;
             return;
-            
+
         }
 
         using MySqlConnection connection = new MySqlConnection(_conn);
@@ -62,12 +63,12 @@ public partial class Login : Window
                 this.Close();
                 _mainWindow.ShowProfile();
                 _mainWindow.NaloizIzDatabaze();
-                _mainWindow.CreatePlaylistButton.IsVisible=true;
+                _mainWindow.CreatePlaylistButton.IsVisible = true;
                 _mainWindow.collab.IsVisible = true;
                 _addPlaylist.IzpisiPlayliste();
                 _playList.NaloziCollabanje();
                 _addPlaylist.PrikaziReacent();
-                
+
             }
             else
             {
@@ -83,5 +84,5 @@ public partial class Login : Window
             throw;
         }
     }
-    
+
 }

@@ -9,7 +9,7 @@ public class App : Application
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
-        
+
     }
 
     public override void OnFrameworkInitializationCompleted()
@@ -18,7 +18,6 @@ public class App : Application
         {
             desktop.MainWindow = new MainWindow();
         }
-
         base.OnFrameworkInitializationCompleted();
     }
 }
